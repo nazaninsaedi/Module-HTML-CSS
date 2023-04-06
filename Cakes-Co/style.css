@@ -1,0 +1,41 @@
+/*  Add your styling here */
+body {
+  background-color: #ffe6ff;
+}
+
+.nav-bar > ul {
+  display: inline;
+  padding: 100px 6em 6em 7em;
+  font-size: 1.25em;
+}
+
+.title,
+.tagline {
+  text-align: center;
+}
+
+.title {
+  font-size: 3em;
+  padding: 1em 1em;
+}
+.tagline {
+  font-size: 2em;
+  padding: 0.75em;
+}
+
+.info {
+  text-align: center;
+  background-color: #ff80ff;
+}
+
+.cake {
+  display: flex;
+}
+
+.cake figure {
+  flex-basis: 0 1 320px;
+}
+.cake img {
+  width: 100%;
+  height: auto;
+}
