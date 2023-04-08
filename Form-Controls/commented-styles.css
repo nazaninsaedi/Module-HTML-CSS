@@ -1,0 +1,125 @@
+body {
+  font-family: Monaco, monospace;
+  font-size: 120%;
+}
+form {
+  /* 37.5em is about 600px
+http://pxtoem.com/
+ */
+  max-width: 37.5em;
+  margin: 2rem auto 4rem;
+  /* Unlike margins, where sometimes you do relational growth, you don't typically want padding to grow with text size */
+  padding: 20px;
+}
+input:not([type="range"]) {
+  border: 1px solid white;
+  padding: 8px 9px;
+}
+/* Most form elements can be styled or made invisible
+so there's no design reason to leave them out */
+fieldset {
+  background: #f0f0f0;
+  border: 3px solid white;
+  padding: 20px;
+  margin-bottom: 40px;
+}
+fieldset fieldset {
+  padding: 0;
+  border: none;
+}
+/* This :not selector is very useful for writing 
+general rules that are not inherited as soon as you add any kind of class */
+legend:not([class]) {
+  font-size: larger;
+  font-weight: bold;
+  background: pink;
+  padding: 10px;
+  box-shadow: -3px 3px 0px skyblue;
+  transform: rotate(-1.5deg);
+}
+/* From class: why do some developers avoid native form elements: 
+Complex UI inputs like datepickers have shadow or pseudo elements attached to them by the browser
+that are hard to style and people often choose 
+to try to replicate those in Javascript instead of 
+styling the browser native element.  They do a varying job of this!
+If you are curious, 
+turn on the shadow DOM in Chrome and Firefox Devtools preferences 
+and Inspect the datepickers:
+https://codepen.io/limograf/pen/LYWdWmW
+
+However, many elements, including button can be easily reset with
+appearance: none
+https://developer.mozilla.org/en-US/docs/Web/CSS/appearance
+https://css-tricks.com/almanac/properties/a/appearance/
+*/
+button {
+  appearance: none;
+  border: 3px solid #171717;
+  padding: 9px 10px;
+  font-family: Monaco, monospace;
+  font-size: 1.5em;
+  display: block;
+  width: 100%;
+  margin: auto;
+}
+button:focus,
+button:hover {
+  filter: invert(1);
+}
+/* as we discussed in class, you can partially adopt coding styles, 
+in this case BEM */
+.o-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* and you can add classes together */
+.c-form__field {
+  margin-bottom: 1rem;
+  display: grid;
+}
+/* Here we're looking at replacing a form control entirely
+with a UI component drawn in CSS */
+/* let's move the radio offscreen and
+do it on a class as we might want more radio button styles in the future
+*/
+.c-form__radio {
+  transform: translateX(-100vw);
+}
+/* make a pseudo element and put it before the label */
+.c-form__option::before {
+  content: "";
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  margin: 2px 10px 0 0;
+  /* this variable has no value, so will just look black for now */
+  background-color: var(--color);
+  clip-path: circle(50%);
+}
+/* here I'm giving the values  */
+.c-form__option--red {
+  --color: red;
+}
+.c-form__option--blue {
+  --color: blue;
+}
+.c-form__option--green {
+  --color: green;
+}
+/* we can do all this because 
+1. we have correctly associated the form control with a label 
+in the HTML so when we click the text, 
+the offscreen radio button is selected 
+2. we have structured our HTML wisely
+so we can select the label by writing a path to
+the label next to the element with the state of checked
+:checked is a state, like :hover - an element
+we call it a pseudo class
+you practised lots of these in css diner
+https://www.smashingmagazine.com/2016/05/an-ultimate-guide-to-css-pseudo-classes-and-pseudo-elements/
+ */
+:checked ~ .c-form__option {
+  filter: brightness(0.1) drop-shadow(10ch 0 0 var(--color));
+  transition: filter 0.4s;
+}

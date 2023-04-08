@@ -1,45 +1,79 @@
-/* Set global styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: Monaco, monospace;
+  font-size: 120%;
 }
-
-header, footer {
-  background-color: #333;
-  color: #fff;
-  padding: 1rem;
-}
-
-main {
-  padding: 1rem;
-}
-
 form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  max-width: 500px;
-  margin: 0 auto;
+  max-width: 37.5em;
+  margin: 2rem auto 4rem;
+  padding: 20px;
 }
-
-label {
-  font-weight: bold;
+input:not([type="range"]) {
+  border: 1px solid #fff;
+  padding: 8px 9px;
 }
-
-input, select {
-  padding: 0.5rem;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+fieldset {
+  background: #f0f0f0;
+  border: 3px solid #fff;
+  padding: 20px;
+  margin-bottom: 40px;
 }
-
-button[type="submit"] {
-  padding: 0.5rem 1rem;
-  background-color: #333;
-  color: #fff;
+fieldset fieldset {
+  padding: 0;
   border: none;
-  border-radius: 5px;
-  cursor: pointer;
 }
-
-button[type="submit"]:hover {
-  background-color: #555;
+legend:not([class]) {
+  font-size: larger;
+  font-weight: 700;
+  background: pink;
+  padding: 10px;
+  box-shadow: -3px 3px 0 #87ceeb;
+  transform: rotate(-1.5deg);
+}
+button {
+  appearance: none;
+  border: 3px solid #171717;
+  padding: 9px 10px;
+  font-family: Monaco, monospace;
+  font-size: 1.5em;
+  display: block;
+  width: 100%;
+  margin: auto;
+}
+button:focus,
+button:hover {
+  filter: invert(1);
+}
+.o-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.c-form__field {
+  margin-bottom: 1rem;
+  display: grid;
+}
+.c-form__radio {
+  transform: translateX(-100vw);
+}
+.c-form__option::before {
+  content: "";
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  margin: 2px 10px 0 0;
+  background-color: var(--color);
+  clip-path: circle(50%);
+}
+.c-form__option--red {
+  --color: red;
+}
+.c-form__option--blue {
+  --color: blue;
+}
+.c-form__option--green {
+  --color: green;
+}
+:checked ~ .c-form__option {
+  filter: brightness(0.1) drop-shadow(10ch 0 0 var(--color));
+  transition: filter 0.4s;
 }
