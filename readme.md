@@ -1,7 +1,9 @@
 # Solutions view
 
-## Tasks
+## What is this
 This branch contains some sample solutions and advice for reviewing your work.
+
+## Real talk
 
 Don't look at these until after you've opened your PR. We could hide these from you, but it's important that you understand that the goal is not to complete the assignment, the goal is to _learn_. 
 
