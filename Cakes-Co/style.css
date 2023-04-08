@@ -1,41 +1,192 @@
-/*  Add your styling here */
+/*  General settings e.g.
+    "undo" browser settings like body margin
+    and set the font(s) for the project
+*/
+
 body {
-  background-color: #ffe6ff;
+  margin: 0;
+  font: 1rem Arial;
 }
 
-.nav-bar > ul {
-  display: inline;
-  padding: 100px 6em 6em 7em;
-  font-size: 1.25em;
-}
+/*  More default settings:
+    Set all images to fill their parent
+    so the parent wrapper controls the shape of the image 
+    (i.e. landscape, portrait etc)
+*/
 
-.title,
-.tagline {
-  text-align: center;
-}
-
-.title {
-  font-size: 3em;
-  padding: 1em 1em;
-}
-.tagline {
-  font-size: 2em;
-  padding: 0.75em;
-}
-
-.info {
-  text-align: center;
-  background-color: #ff80ff;
-}
-
-.cake {
-  display: flex;
-}
-
-.cake figure {
-  flex-basis: 0 1 320px;
-}
-.cake img {
+img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Remember to write styles for mobile first
+   and to adapt these further down with media queries
+   (even if students prefer to code for desktop first, 
+   their code should still be mobile-first, 
+   i.e. mobile styles written with no media queries
+   then use min-width to change for larger devices)
+ */
+
+/* header section */
+header {
+  padding: 20px;
+}
+.nav-list {
+  display: none;
+}
+
+.logo {
+  width: 80px;
+}
+
+.strapline {
+  color: lightgrey;
+  text-align: right;
+  font-size: 1.25rem;
+  margin-bottom: 0;
+  margin-left: 80px;
+}
+
+/*  Welcome section */
+.welcome {
+  padding: 20px;
+  background-color: #f0e1e7;
+}
+
+.welcome-text {
+  padding-bottom: 30px;
+}
+
+.welcome h2 {
+  font-size: 2.5rem;
+  color: white;
+  margin: 1rem 0;
+}
+
+.welcome p {
+  font-size: 1.1rem;
+}
+
+.welcome-image-wrapper {
+  object-fit: cover;
+  height: 350px;
+}
+
+.call-to-action {
+  background-color: #fff;
+  border: 2px solid #fff;
+  color: #bc99a7;
+  font-weight: bold;
+  padding: 10px 20px;
+  font-size: 20px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.call-to-action:hover {
+  background-color: aliceblue;
+  border: 2px solid aliceblue;
+  color: #2d2d2d;
+}
+
+/* 4-image section */
+
+.display {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 20px; /* gap applies between columns and rows */
+}
+
+.display-image-wrapper {
+  width: calc(
+    50% - 10px
+  ); /* removing 10px on each image width to compensate for 20px gap set on parent */
+  height: 250px;
+}
+
+/*  Footer */
+footer {
+  background-color: #f0e1e7;
+  color: #2d2d2d;
+  padding: 20px;
+}
+
+.company-details p {
+  margin-top: 0;
+  margin-bottom: 4px;
+}
+
+.copyright {
+  font-size: 0.75rem;
+  text-align: right;
+}
+
+/* MEDIA QUERIES */
+
+/*  Larger mobiles */
+@media screen and (min-width: 500px) {
+}
+
+/*  tablets */
+@media screen and (min-width: 700px) {
+  .nav-list {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    gap: 20px;
+    text-transform: uppercase;
+  }
+
+  .nav-item {
+    padding: 5px 10px;
+    color: #f0e1e7;
+    background-color: aliceblue;
+    font-weight: bold;
+  }
+
+  .welcome {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 20px;
+  }
+
+  .welcome-image-wrapper {
+    width: 50%;
+  }
+  .welcome-text {
+    width: 50%;
+    text-align: right;
+  }
+
+  .display-image-wrapper {
+    height: 370px;
+  }
+
+  .company-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .copyright {
+    text-align: center;
+  }
+}
+
+/*  desktop */
+@media screen and (min-width: 1000px) {
+  .welcome-image-wrapper {
+    height: 400px;
+  }
+
+  .display {
+    flex-wrap: nowrap;
+  }
+  .display-image-wrapper {
+    height: 300px;
+  }
 }
