@@ -20,7 +20,7 @@ a {
 
 /* Header styles */
 header {
-  background-color: darkgrey;
+  background-color: lightgray;
   text-align: center;
   padding: 25px;
 }
@@ -41,6 +41,17 @@ header {
   align-items: flex-start; /* Align items to the top */
   padding: 20px; /* Increased padding for better spacing */
   margin-top: 20px; /* Add some space between the main content and articles */
+}
+.orange-btn {
+  background: #f77d24;
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  text-transform: none;
+  font-family: Sans-serif;
+  font-size: 16px;
+  padding: 10px;
+  text-align: center;
 }
 
 .article {
@@ -83,7 +94,7 @@ header {
 footer {
   display: block;
   clear: both;
-  background-color: darkgrey;
+  background-color: lightgrey;
   text-align: center;
   padding: 25px;
 }
