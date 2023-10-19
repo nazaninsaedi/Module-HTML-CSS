@@ -5,6 +5,8 @@
   body {
     font-family: "Roboto", sans-serif;
     font-size: 4vw;
+    background-image: linear-gradient(rgb(243, 207, 232), rgb(247, 243, 168), rgb(255, 126, 203));
+     
   }
   h1 {
     font-size: 2.4em;
@@ -15,6 +17,7 @@
     font-weight: 400;
     font-style: italic;
   }
+
   h6 {
     font-size: 0.7em;
     font-weight: 200;
@@ -26,10 +29,12 @@
   }
   img {
     width: 100%;
+    border-radius: 10%;
   }
   
   :root {
-    --backgroundColor: rgb(255, 186, 235);
+    
+    --backgroundColor: linear-gradient(rgb(249, 170, 217), rgb(246, 239, 115), rgb(243, 129, 207));
     --generalPadding: 1em;
     --sectionGap: 2em;
     --white: rgb(75, 6, 52);
@@ -44,6 +49,11 @@
     justify-content: space-between;
     color: var(--white);
   }
+  
+  
+
+
+
   .logo-img {
     margin-top: var(--generalPadding);
     height: 70%;
@@ -217,6 +227,7 @@
       gap: var(--generalPadding);
       grid-template-columns: repeat(4, 1fr);
       grid-template-rows: auto;
+      
     }
   
     footer {
