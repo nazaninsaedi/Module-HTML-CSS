@@ -85,13 +85,29 @@
   .header-area p {
     width: 19ch;
   }
+  .bg-img,
+  .nav-nav {
+    /* The image used */
+    background-image: url("./images/community-nature-Teams-background-122.png");
+  
+    min-height: 100px;
+    width: auto;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+    /* Needed to position the navbar */
+    position: relative;
+  }
   
   .nav-nav {
     display: none;
     width: min-content;
     border-radius: var(--generalPadding);
     padding: var(--generalPadding);
-    background-color: rgb(231, 119, 162);
+   
     position: absolute;
     top: 70px;
     right: 100%;
@@ -114,7 +130,7 @@
     border: solid 1px;
     text-decoration: none;
     border-radius: 0.5em;
-    background-color: var(--backgroundColor);
+    background-color: rgb(248, 227, 111)
     padding: 0.25em 1em 0.2em;
     color: var(--white);
   }
