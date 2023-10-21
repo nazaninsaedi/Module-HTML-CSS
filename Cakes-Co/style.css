@@ -226,7 +226,9 @@
       display: grid;
       gap: var(--generalPadding);
       grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: auto;
+      grid-template-rows: auto; 
+      display: grid;
+      grid-template-columns: auto auto auto auto;
       
     }
   
@@ -242,4 +244,8 @@
       flex-direction: row;
       gap: calc(var(--generalPadding) * 2);
     }
+    #hamburger {
+      display: none;
+    }
   }
+ 
