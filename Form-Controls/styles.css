@@ -2,7 +2,13 @@
 body{
     background-image: linear-gradient(rgb(243, 207, 232), rgb(247, 243, 168), rgb(226, 171, 204));;
 }
-
+h1{
+color: rgb(82, 6, 86);
+}
+.btn{
+    color: rgb(102, 9, 62);
+    font-weight: 400;
+}
 
 main{
     display: flex;
@@ -25,11 +31,22 @@ header, footer{
 }
 .title{
     font-weight: lighter;
-    font-size: 30px;
-    text-align: center;
+    font-size: 40px;
     text-decoration: underline;
-    margin-bottom: -20px;
+    margin-bottom: 10px;
     background-image: linear-gradient(rgb(243, 207, 232), rgb(228, 225, 167));;
+    padding: 15px 25px;
+    margin-top: -20px;
+    border-radius: 10px;
+    border: solid rgb(238, 162, 162);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+}
+.dit {
+    color:rgb(57, 7, 103)
 }
 
 label{
@@ -49,7 +66,7 @@ input[type=text], input[type=email], input[type=date]{
 }
 
 select[name=color], select[name=size]{
-    border: solid 2px darkgrey;
+    border: solid 2px rgb(238, 184, 242);
     border-radius: 5px;
     padding: 10px;
     margin: 5px;
@@ -64,7 +81,7 @@ select[name=color], select[name=size]{
     justify-content: center;
     align-items: center;
     text-align: center;
-    border-color: palevioletred;
+    border-color: rgb(233, 91, 139);
 }
 
 .place-order{
@@ -79,5 +96,5 @@ select[name=color], select[name=size]{
     background-color: pink;
 }
 .size {
-    background-color: ;
+    background-color: pink;
 }
