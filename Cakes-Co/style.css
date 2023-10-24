@@ -53,7 +53,6 @@
   
 
 
-
   .logo-img {
     margin-top: var(--generalPadding);
     height: 70%;
@@ -67,8 +66,9 @@
     justify-content: space-between;
     align-items: flex-end;
     text-align: end;
+    background-image: ;
   }
-  #menu-inpt {
+  #menu-input {
     display: none;
   }
   .menu-lbl {
@@ -98,7 +98,7 @@
     transition: 0s;
   }
   
-  #menu-inpt:checked + .nav-nav {
+  #menu-inpt :checked + .nav-nav {
     display: block;
     right: var(--generalPadding);
   }
@@ -247,5 +247,8 @@
     #hamburger {
       display: none;
     }
+  }
+  .article-button {
+    font-size: 16px;
   }
  
